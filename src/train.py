@@ -56,7 +56,7 @@ def main() -> None:
     # ------------------------------------------------------------------
     curve = fit_response_curve(df)
     if curve is None:
-        print("WARNING: could not fit response curve — insufficient data.")
+        print("WARNING: could not fit response curve - insufficient data.")
         curve_dict = None
     else:
         curve_dict = curve.to_dict()
@@ -98,7 +98,7 @@ def main() -> None:
     with open(model_path, "wb") as f:
         pickle.dump(model, f, protocol=pickle.HIGHEST_PROTOCOL)
 
-    print(f"\nModel saved → {model_path}")
+    print(f"\nModel saved -> {model_path}")
 
 
 if __name__ == "__main__":

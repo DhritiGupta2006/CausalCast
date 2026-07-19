@@ -62,7 +62,7 @@ def main() -> None:
     was_aggregated = len(daily) < len(df)
     if was_aggregated:
         print(
-            f"  Aggregated {len(df)} rows → {len(daily)} daily rows "
+            f"  Aggregated {len(df)} rows -> {len(daily)} daily rows "
             f"(duplicate dates collapsed)"
         )
 
@@ -82,7 +82,7 @@ def main() -> None:
         os.makedirs(features_dir, exist_ok=True)
     daily.to_csv(features_path, index=False)
 
-    print(f"Features: {len(daily)} rows → {features_path}")
+    print(f"Features: {len(daily)} rows -> {features_path}")
 
 
 if __name__ == "__main__":

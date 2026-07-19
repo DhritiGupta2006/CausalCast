@@ -95,7 +95,7 @@ def main() -> None:
             output["baseline_spend"] = round(avg_spend, 2)
             output["predicted_roas"] = round(predicted_rev / avg_spend, 4)
     else:
-        print("  [WARN] No response curve in model — skipping budget columns")
+        print("  [WARN] No response curve in model - skipping budget columns")
 
     # ------------------------------------------------------------------
     # 6. Incrementality signal
@@ -107,7 +107,7 @@ def main() -> None:
         output["incrementality_baseline_extrapolated"] = inc.baseline_extrapolated
         output["incrementality_disclaimer"] = inc.disclaimer
     else:
-        print("  [WARN] Could not estimate incrementality — skipping columns")
+        print("  [WARN] Could not estimate incrementality - skipping columns")
 
     # ------------------------------------------------------------------
     # 7. Write predictions (fresh, never append)
@@ -117,7 +117,7 @@ def main() -> None:
         os.makedirs(output_dir, exist_ok=True)
     output.to_csv(output_path, index=False)
 
-    print(f"\nPredictions: {len(output)} rows → {output_path}")
+    print(f"\nPredictions: {len(output)} rows -> {output_path}")
     print(f"  Trend: {fc.stats.trend_direction} (slope={fc.stats.slope})")
     print(f"  Revenue P50 avg: ${fc.stats.avg_p50:,}")
     if inc is not None:
@@ -128,9 +128,9 @@ def main() -> None:
         if inc.baseline_extrapolated:
             print(
                 "  [NOTE] Zero-spend baseline is extrapolated far outside "
-                "the observed spend range — confidence downgraded to 'low'."
+                "the observed spend range - confidence downgraded to 'low'."
             )
-        print(f"  ⚠  {INCREMENTALITY_DISCLAIMER}")
+        print(f"  [!] {INCREMENTALITY_DISCLAIMER}")
 
 
 if __name__ == "__main__":
