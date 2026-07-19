@@ -110,4 +110,12 @@ docs/                     # architecture, methodology, demo-workflow (this folde
 
 ## Team
 
-_Team name, members, and college — fill in before submission._
+**Team Name:** `Cognify`
+
+**College:** `SRM Institute of Science and Technology`
+
+| Name | Role |
+|------|------|
+| `Dhriti Gupta` | `AI/ML Lead` |
+| `Nandini Srivastava` | `Backend Lead` |
+| `Pranav Mittal` | `Frontend Lead` |
